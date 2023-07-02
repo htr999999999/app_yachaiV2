@@ -18,6 +18,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Registrar extends AppCompatActivity {
 
@@ -26,6 +28,8 @@ public class Registrar extends AppCompatActivity {
     FirebaseAuth mAuth;
     ProgressBar progressBar;
     TextView txtview;
+    FirebaseDatabase database;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +59,9 @@ public class Registrar extends AppCompatActivity {
         buttonreg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                database = FirebaseDatabase.getInstance();
+                reference= database.getReference("users");
                 progressBar.setVisibility(View.VISIBLE);
                 String email, password, nombre, apellido, telefono;
                 email = String.valueOf(editTextEmail.getText());
@@ -83,6 +90,10 @@ public class Registrar extends AppCompatActivity {
                     Toast.makeText(Registrar.this, "Ingresa el telefono", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+                Helper helper= new Helper(nombre, apellido, telefono, email, password);
+                reference.child(nombre).setValue(helper);
+
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
