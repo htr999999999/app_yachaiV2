@@ -1,14 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Miperfil">
+    android:orientation="vertical"
+    tools:context=".Miperfil"
+    >
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text=""
+        android:id="@+id/perfil"
+
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Mi Perfil" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
 
-</FrameLayout>
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/perfil"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnsubirfoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subir foto"
+            android:layout_marginBottom="70dp"
+            android:backgroundTint="@color/btncolor"/>
+
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="351dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Nombres"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="351dp"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtnombreusuario"
+                android:layout_width="212dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:background="@android:color/transparent"/>
+
+            <Button
+
+                android:id="@+id/btneditarusuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/btncolor"
+                android:text="Editar" />
+
+        </LinearLayout>
+        <View
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="351dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Correo electronico"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="351dp"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edtcorreousuario"
+                android:layout_width="212dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/btneditarcorreo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Editar"
+                android:backgroundTint="@color/btncolor"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="351dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,14 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".Nosotros">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Sobre Nosotros" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YACHAI"
+        android:textSize="30sp" />
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="258dp"
+        android:layout_weight="0"
+        android:src="@drawable/bg" />
+
+    <TableLayout
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Mision"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="60dp" >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/mision" />
+
+            <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                android:maxLines="10"
+                android:text="Nuestra misión en Yachay es empoderar a los \njóvenes a través de la educación y el desarrollo \nde habilidades blandas."/>
+
+        </TableRow>
+        <TextView
+            android:text="Visión"/>
+        <TableRow
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/vision" />
+
+            <TextView
+
+                android:gravity="center_vertical"
+                android:id="@+id/textView2"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:maxLines="10"
+                android:text="Convertirnos en la principal plataforma de \naprendizaje de habilidades \nblandas para jóvenes." />
+        </TableRow>
+        <TextView
+            android:text="Valores"/>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/valores" />
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/textView3"
+                android:layout_width="3dp"
+                android:layout_height="60dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Accesibilidad \nCalidad \nColaboración" />
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>
