@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "519902474112",
+    "project_id": "app-yachai",
+    "storage_bucket": "app-yachai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519902474112:android:563b2a7e58c341b062db65",
+        "android_client_info": {
+          "package_name": "com.example.yachay_aplicacion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "519902474112-uu578cio0c47rfjhj6k1pkicekh23l51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrkZscfdDSAZOcXMW2FFQ1PvtdCUT5gqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "519902474112-uu578cio0c47rfjhj6k1pkicekh23l51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

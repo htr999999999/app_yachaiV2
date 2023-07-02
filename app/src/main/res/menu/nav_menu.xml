@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+    <group
+        android:checkableBehavior="single">
+        <item android:id="@+id/nav_perfil"
+            android:icon="@drawable/perfil"
+            android:title="Mi Perfil"/>
+        <item android:id="@+id/nav_inicio"
+            android:icon="@drawable/inicioa"
+            android:title="Inicio"/>
+        <item android:id="@+id/nav_nosotros"
+            android:icon="@drawable/nosotros"
+            android:title="Nosotros"/>
+        <item android:id="@+id/nav_cursos"
+            android:icon="@drawable/cursos"
+            android:title="Cursos"/>
+        <item android:id="@+id/nav_aliados"
+            android:icon="@drawable/aliados"
+            android:title="Aliados"/>
+        <item android:id="@+id/nav_faq"
+            android:icon="@drawable/frecuentes"
+            android:title="Preguntas Frecuentes"/>
+
+        </group>
+
+    <item
+        android:title="">
+
+        <menu>
+            <item
+                android:id="@+id/nav_salir"
+                android:icon="@drawable/salir"
+                android:title="Salir"/>
+        </menu>
+    </item>
+
+
+
+</menu>
