@@ -1,14 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".FAQ">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView6"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preguntas frecuentes" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:adjustViewBounds="true"
+
+                android:src="@drawable/bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundtable_corner">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="1. ¿Cómo puedo acceder a los cursos en la app? " />
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Para acceder a los cursos en la app, simplemente descarga la aplicación desde la tienda de aplicaciones de tu dispositivo móvil. Una vez instalada, crea una cuenta gratuita y podrás explorar todos los cursos disponibles." />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="2. ¿Cuál es la duración de los cursos y cómo funcionan?"/>
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                android:text="La duración de los cursos puede variar, pero generalmente están diseñados para ser completados en un período de tiempo específico de 4 o 5 horas. Los cursos consisten en lecciones por cada módulo con video y diapositivas."/>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="3. ¿Hay algún requisito previo para inscribirme en los cursos? " />
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="La mayoría de los cursos no tienen requisitos previos específicos. Están diseñados para ser accesibles para todos, independientemente de su nivel de experiencia."/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -27,9 +27,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:text="Mision"/>
 
         <TableRow
+            android:background="@drawable/roundtable_corner"
             android:layout_width="match_parent"
             android:layout_height="60dp" >
 
@@ -51,11 +54,15 @@
 
         </TableRow>
         <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:text="Visión"/>
+
         <TableRow
-            android:layout_marginRight="20dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+
+            android:background="@drawable/roundtable_corner">
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -65,17 +72,20 @@
 
             <TextView
 
-                android:gravity="center_vertical"
                 android:id="@+id/textView2"
                 android:layout_width="350dp"
                 android:layout_height="60dp"
+                android:gravity="center_vertical"
                 android:maxLines="10"
                 android:text="Convertirnos en la principal plataforma de \naprendizaje de habilidades \nblandas para jóvenes." />
         </TableRow>
         <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:text="Valores"/>
 
         <TableRow
+            android:background="@drawable/roundtable_corner"
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
