@@ -1,14 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Aliados">
+    tools:context=".Aliados"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Aliados" />
+    <LinearLayout
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@drawable/roundtable_corner">
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/escudo"/>
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="308dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="El distrito de Alonso de Alvarado es uno de los once distritos que conforman la provincia de Lamas en el departamento de San Martín"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/senal"/>
+
+    </LinearLayout>
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Mis aliados" />
+        android:layout_marginBottom="0dp"
+        android:adjustViewBounds="true"
 
-</FrameLayout>
+        android:src="@drawable/bg" />
+
+</LinearLayout>
