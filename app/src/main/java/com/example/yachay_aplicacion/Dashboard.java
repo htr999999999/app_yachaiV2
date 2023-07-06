@@ -66,7 +66,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Aliados()).commit();
                 break;
             case R.id.nav_cursos:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Cursos()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Inicio()).commit();
                 break;
             case R.id.nav_faq:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FAQ()).commit();
