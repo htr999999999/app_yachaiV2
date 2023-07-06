@@ -3,6 +3,7 @@ package com.example.yachay_aplicacion;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
@@ -10,11 +11,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class Inicio extends Fragment implements View.OnClickListener {
     CardView modulo1,modulo2,modulo3,modulo4,modulo5,modulo6;
-
+    FirebaseAuth auth;
+    TextView textView;
+    FirebaseUser user;
+    FirebaseDatabase database;
+    DatabaseReference reference;
 
     public Inicio() {
         // Required empty public constructor
@@ -23,8 +37,30 @@ public class Inicio extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        auth = FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        reference= database.getReference("users");
+        String id = auth.getCurrentUser().getUid();
+        DatabaseReference username = reference.child(id).child("nombre");
+
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_inicio, container, false);
+
+        username.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String username = snapshot.getValue().toString();
+                textView = v.findViewById(R.id.tvnombre);
+                textView.setText("Bienvenido "+username+ " !");
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         modulo1 = v.findViewById(R.id.activi1);
         modulo1.setOnClickListener(this);
         modulo2 = v.findViewById(R.id.activi2);

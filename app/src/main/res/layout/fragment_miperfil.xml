@@ -23,106 +23,158 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="521dp"
+        android:layout_marginTop="30dp"
         android:gravity="center_horizontal"
-        android:layout_marginTop="30dp">
+        android:orientation="vertical">
 
         <androidx.constraintlayout.utils.widget.ImageFilterView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/perfil"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/perfil" />
 
         <Button
             android:id="@+id/btnsubirfoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subir foto"
-            android:layout_marginBottom="70dp"
-            android:backgroundTint="@color/btncolor"/>
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="@color/btncolor"
+            android:text="Subir foto" />
 
 
         <View
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="5dp"
             android:layout_width="351dp"
             android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/darker_gray" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:text="Nombres"
-            android:textStyle="bold"/>
-        <LinearLayout
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="351dp"
-            android:layout_height="45dp"
-            android:orientation="horizontal">
+            android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/edtnombreusuario"
-                android:layout_width="212dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:inputType="textPersonName"
-                android:text="Name"
-                android:background="@android:color/transparent"/>
 
-            <Button
+        <EditText
+            android:id="@+id/tvwnombre"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
 
-                android:id="@+id/btneditarusuario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="@color/btncolor"
-                android:text="Editar" />
-
-        </LinearLayout>
         <View
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="5dp"
             android:layout_width="351dp"
             android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Apellido"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/tvwapeliido"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <View
+            android:layout_width="351dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <View
+            android:layout_width="351dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/darker_gray" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:text="Correo electronico"
-            android:textStyle="bold"/>
-        <LinearLayout
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="8dp"
-            android:layout_width="351dp"
-            android:layout_height="45dp"
-            android:orientation="horizontal">
+            android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/edtcorreousuario"
-                android:layout_width="212dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:clickable="false"
-                android:inputType="textPersonName"
-                android:text="Name"
-                android:background="@android:color/transparent"/>
+        <EditText
+            android:id="@+id/tvwcorreo"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
 
-            <Button
-                android:id="@+id/btneditarcorreo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Editar"
-                android:backgroundTint="@color/btncolor"/>
-
-        </LinearLayout>
         <View
             android:layout_width="351dp"
             android:layout_height="1dp"
-            android:background="@android:color/darker_gray"/>
+            android:background="@android:color/darker_gray" />
+
+        <View
+            android:layout_width="351dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Telefono"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/tvwtelefono"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <View
+            android:layout_width="351dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="82dp">
+
+            <Button
+                android:id="@+id/btneditarguardar"
+
+                android:layout_width="wrap_content"
+                android:layout_height="72dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/btncolor"
+                android:text="Editar" />
+
+            <Button
+                android:id="@+id/btneditarusuario"
+                android:layout_width="wrap_content"
+
+                android:layout_height="72dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/btncolor"
+                android:text="Editar" />
+        </LinearLayout>
+
 
     </LinearLayout>
 
