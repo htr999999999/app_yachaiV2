@@ -60,8 +60,6 @@ public class Registrar extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                database = FirebaseDatabase.getInstance();
-                reference= database.getReference("users");
                 progressBar.setVisibility(View.VISIBLE);
                 String email, password, nombre, apellido, telefono;
                 email = String.valueOf(editTextEmail.getText());
@@ -91,8 +89,6 @@ public class Registrar extends AppCompatActivity {
                     return;
                 }
 
-                Helper helper= new Helper(nombre, apellido, telefono, email, password);
-                reference.child(nombre).setValue(helper);
 
 
                 mAuth.createUserWithEmailAndPassword(email, password)
@@ -106,6 +102,11 @@ public class Registrar extends AppCompatActivity {
                                     Toast.makeText(Registrar.this, "Cuenta Creada.",
                                             Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(), Login.class);
+                                    intent.putExtra("nombre", nombre);
+                                    intent.putExtra("apellido",apellido);
+                                    intent.putExtra("telefono", telefono);
+                                    intent.putExtra("email", email);
+                                    intent.putExtra("password", password);
                                     startActivity(intent);
                                     finish();
 
