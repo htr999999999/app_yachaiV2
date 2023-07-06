@@ -26,9 +26,11 @@ public class Modulo3 extends AppCompatActivity {
         listView=findViewById(R.id.listvieww);
         videoView=findViewById(R.id.videoView2);
         videolist = new ArrayList<>();
-        videolist.add("whchafa");
-
-        videolist.add("omaiga");
+        videolist.add("Fundamentos del trabajo en equipo");
+        videolist.add("Roles y responsabilidades");
+        videolist.add("Comunicación y resolución de conflictos");
+        videolist.add("Colaboracion en toma de decisiones");
+        videolist.add("Mejora continua");
         adapter=new ArrayAdapter(this,  android.R.layout.simple_list_item_1,videolist);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -36,10 +38,19 @@ public class Modulo3 extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.pusitait));
+                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.a31));
                         break;
                     case 1:
-                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.omaiga));
+                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.a32));
+                        break;
+                    case 2:
+                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.a33));
+                        break;
+                    case 3:
+                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.a34));
+                        break;
+                    case 5:
+                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.a35));
                         break;
                     default:
                         break;

@@ -26,9 +26,10 @@ public class Modulo2 extends AppCompatActivity {
         listView=findViewById(R.id.listvieww);
         videoView=findViewById(R.id.videoView2);
         videolist = new ArrayList<>();
-        videolist.add("modulo1");
-
-        videolist.add("modulo2");
+        videolist.add("Fundamentos de la comunicación");
+        videolist.add("Habilidades de expresión");
+        videolist.add("Habilidades de escritura");
+        videolist.add("Comunicación y resolución de conflictos");
         adapter=new ArrayAdapter(this,  android.R.layout.simple_list_item_1,videolist);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -36,10 +37,16 @@ public class Modulo2 extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.pusitait));
+                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.a21));
                         break;
                     case 1:
-                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.omaiga));
+                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.a22));
+                        break;
+                    case 2:
+                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.a23));
+                        break;
+                    case 3:
+                        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.a24));
                         break;
                     default:
                         break;
