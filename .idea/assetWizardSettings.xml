@@ -3,6 +3,11 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState />
+          </value>
+        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -28,8 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="inicioa" />
-                            <entry key="sourceFile" value="C:\Users\s\AndroidStudioProjects\Yachay_aplicacion" />
+                            <entry key="outputName" value="baseline_home_111" />
+                            <entry key="sourceFile" value="C:\Users\s\Downloads\YACHAY(1)\Logo.svg" />
                           </map>
                         </option>
                       </PersistentState>
